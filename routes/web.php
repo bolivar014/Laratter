@@ -13,7 +13,15 @@
 
 /*  */
 Route::get('/', function () {
-    return view('welcome');
+    $links = [
+        'https://platzi.com/laravel' => 'Curso De Laravel',
+        'https://laravel.com' => 'Pagina Oficial De Laravel'
+    ];
+
+    return view('welcome',[
+        'user' => 'Juan Camilo Valdes Bolivar',
+        'links' => $links,
+    ]);
 });
 
 Route::get('/about', function() {
