@@ -11,22 +11,12 @@
 |
 */
 
-/*  */
-Route::get('/', function () {
-    $links = [
-        'https://platzi.com/laravel' => 'Curso De Laravel',
-        'https://laravel.com' => 'Pagina Oficial De Laravel'
-    ];
+/* Rutas del sitio Web. */
+Route::get('/', 'PagesController@home');
 
-    return view('welcome',[
-        'user' => 'Juan Camilo Valdes Bolivar',
-        'links' => $links,
-    ]);
-});
+Route::get('/about', 'PagesController@about');
 
-Route::get('/about', function() {
-    return view('about');
-});
+
 
 /*
 Route::get('/about', function() {
