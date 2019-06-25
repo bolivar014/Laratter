@@ -17,6 +17,8 @@ Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 
 
+// Rutas para el control de los mensajes..
+Route::get('/messages/{message}', 'MessagesController@show');
 
 /*
 Route::get('/about', function() {
