@@ -20,6 +20,7 @@ Route::get('/about', 'PagesController@about');
 // Rutas para el control de los mensajes..
 Route::get('/messages/{message}', 'MessagesController@show');
 
+Route::post('/messages/create', 'MessagesController@create');
 /*
 Route::get('/about', function() {
     return 'Acerca De Nosotros';
