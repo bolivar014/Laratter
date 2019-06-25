@@ -6,7 +6,7 @@
     @section('content')
         <div class="content">
             <div class="title m-b-md">
-                Laratter - Acerca De Nosotros
+                <h1 class="h3">Laratter - Acerca De Nosotros</h1>
             </div>
         </div>
     @endsection
