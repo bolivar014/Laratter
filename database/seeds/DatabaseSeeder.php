@@ -12,5 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        // Creamos 100 Mensajes nuevos en la tabla Message
+        factory(App\Message::class)
+		->times(100) // Generamos 100 mensajes y los creamos
+		->create();
     }
 }
