@@ -99,7 +99,7 @@
 [*] Ejecutar RollBack de Todas las MIGRATION existentes y ejecutar los Seeds Creados para generar sus datos...
 	php artisan migrate:refresh --seed 
 	
-[*] 
+[*] metodo paginate() de eloquent
 	
 [*] 
 	

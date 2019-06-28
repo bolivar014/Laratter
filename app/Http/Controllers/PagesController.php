@@ -9,7 +9,7 @@ class PagesController extends Controller
     // Controlador View Home "Welcome"
     public function home()
     {
-        $messages = Message::all();
+        $messages = Message::paginate(30); // Paginación(Cantidad Datos A Mostrar)
         
         // dd($messages); // desbordamiento del código para verificar datos enviados
 
