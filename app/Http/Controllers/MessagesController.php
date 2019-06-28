@@ -21,7 +21,10 @@ class MessagesController extends Controller
     // función para la creación de un nuevo mensaje el cual se parametriza en App\Http\Request\CreateMessageRequest
     public function create(CreateMessageRequest $request)
     {
+        $user = $request->user();
+        
         $message = Message::create([
+            'user_id' => $user->id,
             'content' => $request->input('message'),
             'image' => 'http://lorempixel.com/600/338?'.mt_rand(0, 1000)
         ]);

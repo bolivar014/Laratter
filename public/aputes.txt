@@ -124,7 +124,8 @@
 [*] Agregar Autenticación en laravel...
 	php artisan make:auth
 	
-[*] 
+[*] Ejecutar los seeds creados.
+	php artisan db:seed
 	
 [*] 
 	
