@@ -40,6 +40,8 @@ $factory->define(User::class, function (Faker $faker) {
 $factory->define(App\Message::class, function(Faker $faker){
     return [
         'content' => $faker->realText(random_int(20, 160)), // Se le asigna una longitud en el texto de 20 a 160 caracteres.
-        'image' => $faker->imageUrl(600,338)
+        'image' => $faker->imageUrl(600,338),
+        'created_at' => $faker->dateTimeThisDecade,
+        'updated_at' => $faker->dateTimeThisDecade,
     ];
 });

@@ -29,3 +29,6 @@ Route::get('/about', function() {
 
 Auth::routes();
 
+// Rutas UsersController
+Route::get('/{username}', 'UsersController@show');
+

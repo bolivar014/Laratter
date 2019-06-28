@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //  Validar Todos los mensajes de un usuario...
+    public function messages()
+    {
+        return $this->hasMany(Message::class)->orderBy('created_at', 'desc'); // buscamos los mensajes del usuario y ordenamos desc
+    }
 }
