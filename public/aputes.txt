@@ -100,8 +100,29 @@
 	php artisan migrate:refresh --seed 
 	
 [*] metodo paginate() de eloquent
+	Agregamos en el controlador donde deseamos dar una paginación, la funcion ::paginate(Longitud);
+	Ejm: Paginación View Welcome
 	
-[*] 
+	public function home()
+    {
+        $messages = Message::paginate(30); // Paginación(Cantidad Datos A Mostrar)
+        
+        // dd($messages); // desbordamiento del código para verificar datos enviados
+
+        return view('welcome',[
+            'messages' => $messages,
+            ]);
+    }
+	
+	Adicional En la View Agregamos...
+	@if(count($messages))
+		<div class="mt-2 mx-auto">
+			{{ $messages->links('pagination::bootstrap-4') }}
+		</div>
+	@endif
+
+[*] Agregar Autenticación en laravel...
+	php artisan make:auth
 	
 [*] 
 	

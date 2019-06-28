@@ -26,3 +26,6 @@ Route::get('/about', function() {
     return 'Acerca De Nosotros';
 });
 */
+
+Auth::routes();
+
